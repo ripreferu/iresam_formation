@@ -1,0 +1,67 @@
+#+BEGIN_SRC dot :file switch.png
+  digraph G{
+          rankdir=LR;
+          Internet -> Switch -> KGT;
+          Switch [shape="box"];
+  }
+#+END_SRC
+
+#+RESULTS:
+[[file:switch.png]]
+ #+BEGIN_SRC dot :file struture_resal.dot :tangle structure_resal.dot
+   graph {
+
+         node [shape= box];
+         rankdir=LR;
+         Elrond [ shape="default" label="Elrond"];
+         Sauron [shape=cylinder,label="Sauron, \n coeur du réseaux"];
+         #Sauron --{Switch1, Switch2, Switch3, Switch4, Switch5, Switch6, Switch7, Switch8, Switch9}-- Kagettes ;
+         Strass [shape=diamond, label="Renater"];
+         Sauron--Strass;
+         Barbie;
+         Deralia;
+         Kent [style=dashed];
+         Dagobah;
+         Dagda --Sauron;
+         Dagda--Deralia [label="ceph",style=dotted];
+         Deralia--{Telos, Kiros, Celestis, naboo,new_unifi,Geonosis,tracker,odin,neree} [label="VM",style=dashed];
+         Kent--{Barbie, Elrond, Dagda, Deralia} [label="LDAP admin",color="red",penwidht=3.0,style=dashed];
+         Elrond--Barbie [color="green",penwidth=3.0];
+         Sauron--{Barbie,Elrond} [label="pare-feu",color="green",penwidth=3.0];
+         Deralia -- Sauron;
+         Kent -- Sauron;
+         Dagobah --Sauron;
+         Dagobah -- Elrond [color="green",penwidth=3.0];
+         Dagobah-- Exterieur[label="load-balancer"];
+         Exterieur[shape=diamond ,label="fibre orange"];
+         Dagda -- Kiros [style=dotted];
+         {node [shape=plaintext]
+         Siteadmin; Opendrop; Agora; LDAP_user; mysql; Wiki ; redmine ;unifi ; reverse_proxy ;observium ; phabricator;
+# point_game
+};
+         Kiros --Opendrop;
+         Telos--Siteadmin ;
+         Siteadmin[label=siteadmin, URL="[iresam.org|https://www.iresam.org]", tooltip="lien vers iresam.org"];
+         naboo--Agora;
+         Agora [label="site de vote", URL="[agora|https://agora.iresam.org]", tooltip="lien vers le site de vote"];
+         phabricator [label="gestion du code", URL="[git|https://phabricator.iresam.org]",tooltip="lien vers le git" ];
+         Geonosis--LDAP_user;
+         Celestis--mysql;
+         LDAP_user[label="annuaire des utilisateur", URL="[LDAP_USER|http://192.168.0.114/ldapuseradmin/]",tooltip="lien vers l'annuaire utilisateur"];
+         neree--reverse_proxy;
+         unifi [label="gestion des bornes wifi", URL="[unifi|https://newunifi.iresam.org:8843]", tooltip="lien vers unifi"];
+         mysql [label="serveur SQL centralisé",URL="[celesits|https//celestis.iresam.org/celestisadmin]",tooltip="lien vers célestis"];
+         odin--Wiki;
+         Wiki [URL="[Wiki|http://wiki.iresam.org]", tooltip="lien vers le Wiki"];
+         #point_game[label="pointgame", URL="[pointgame|https://pointgame.iresam.org/]", tooltip="lien vers le point game"]
+         tracker--redmine;
+         tracker--phabricator;
+         new_unifi--unifi;
+         Kent--observium;
+         observium [label="observium",URL="[observium|https://observium.iresam.org]",tooltip="contrôle de l'infrastructure"];
+
+   }
+ #+END_SRC
+
+ #+RESULTS:
+ [[file:struture_resal.dot]]
