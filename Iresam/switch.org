@@ -8,7 +8,7 @@
 
 #+RESULTS:
 [[file:switch.png]]
- #+BEGIN_SRC dot :file struture_resal.dot :tangle structure_resal.dot
+ #+BEGIN_SRC dot :file image.png :tangle structure_resal.dot
    graph {
 
          node [shape= box];
@@ -16,7 +16,7 @@
          Elrond [ shape="default" label="Elrond"];
          Sauron [shape=cylinder,label="Sauron, \n coeur du réseaux"];
          #Sauron --{Switch1, Switch2, Switch3, Switch4, Switch5, Switch6, Switch7, Switch8, Switch9}-- Kagettes ;
-         Strass [shape=diamond, label="Renater"];
+         Strass [shape=diamond, label="école"];
          Sauron--Strass;
          Barbie;
          Deralia;
@@ -30,8 +30,8 @@
          Sauron--{Barbie,Elrond} [label="pare-feu",color="green",penwidth=3.0];
          Deralia -- Sauron;
          Kent -- Sauron;
-         Dagobah --Sauron;
-         Dagobah -- Elrond [color="green",penwidth=3.0];
+         
+         Sauron -- Dagobah [color="green",penwidth=3.0];
          Dagobah-- Exterieur[label="load-balancer"];
          Exterieur[shape=diamond ,label="fibre orange"];
          Dagda -- Kiros [style=dotted];
@@ -59,9 +59,10 @@
          new_unifi--unifi;
          Kent--observium;
          observium [label="observium",URL="[observium|https://observium.iresam.org]",tooltip="contrôle de l'infrastructure"];
-
+         Vanqor--Sauron;
+         Jakku--Sauron;
    }
  #+END_SRC
 
  #+RESULTS:
- [[file:struture_resal.dot]]
+ [[file:image.png]]
